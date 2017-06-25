@@ -11,13 +11,13 @@ set :backend, :exec
 
 describe file('/usr/share/google-chrome/extensions/cjpalhdlnbpafiamejdnhcphjbkeiagm.json') do
   it { should be_file }
-  it { should be_mode 0644 }
+  it { should be_mode '0644' }
 end
 describe file('/usr/share/google-chrome/extensions/gcbommkclmclpchllfjekcdonpmejbdp.json') do
   it { should be_file }
-  it { should be_mode 0644 }
+  it { should be_mode '0644' }
 end
 describe file('/usr/share/google-chrome/extensions/pkehgijcmpdhfbdbbnkijodmdjhbjlgp.json') do
   it { should be_file }
-  it { should be_mode 0644 }
+  it { should be_mode '0644' }
 end
