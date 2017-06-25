@@ -1,0 +1,17 @@
+---
+
+- name: Ensure extensions directory exists
+  file:
+    dest: "{{ chrome_prefs_path }}"
+    state: directory
+    mode: '0755'
+
+## https://developer.chrome.com/extensions/external_extensions
+## https://stackoverflow.com/questions/8946325/chrome-extension-id-how-to-find-it
+- name: Chrome Extensions
+  template:
+    src: "{{ chrome_extensions_prefs_template }}"
+    dest: "{{ chrome_prefs_path }}/{{ item }}.json"
+    mode: '0644'
+    backup: yes
+  with_items: "{{ chrome_extensions }}"

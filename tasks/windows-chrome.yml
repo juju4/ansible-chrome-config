@@ -1,0 +1,11 @@
+---
+
+## https://developer.chrome.com/extensions/external_extensions
+## https://stackoverflow.com/questions/8946325/chrome-extension-id-how-to-find-it
+- name: Chrome Extensions
+  win_regedit:
+    key: "HKLM:\\Software\\Wow6432Node\\Google\\Chrome\\Extensions\\{{ item }}"
+    value: "update_url"
+    datatype: string
+    data: "{{ chrome_external_update_url }}"
+  with_items: "{{ chrome_extensions }}"

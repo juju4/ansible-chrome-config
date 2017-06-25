@@ -1,0 +1,11 @@
+---
+
+## uBlock Origin, https everywhere
+chrome_extensions:
+    - cjpalhdlnbpafiamejdnhcphjbkeiagm
+    - gcbommkclmclpchllfjekcdonpmejbdp
+    - pkehgijcmpdhfbdbbnkijodmdjhbjlgp
+
+chrome_extensions_prefs_template: extensionid.json.j2
+chrome_external_update_url: "https://clients2.google.com/service/update2/crx"
+
