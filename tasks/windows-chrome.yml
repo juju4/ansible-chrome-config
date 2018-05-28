@@ -9,3 +9,10 @@
     datatype: string
     data: "{{ chrome_external_update_url }}"
   with_items: "{{ chrome_extensions }}"
+
+- name: Ensure Auto-update is set once a day
+  win_regedit:
+    key: "HKLM:\\Software\\Policies\\Google\\Update"
+    value: "AutoUpdateCheckPeriodMinutes"
+    datatype: dword
+    data: 1440
