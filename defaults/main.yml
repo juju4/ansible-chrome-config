@@ -9,4 +9,3 @@ chrome_extensions:
 
 chrome_extensions_prefs_template: extensionid.json.j2
 chrome_external_update_url: "https://clients2.google.com/service/update2/crx"
-
