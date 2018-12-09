@@ -1,9 +1,5 @@
 ---
 
 - hosts: all
-#- hosts: test-kitchen
-#  vars:
-#    - a:
   roles:
-    - juju4.chrome-config
-
+    - juju4.chrome_config

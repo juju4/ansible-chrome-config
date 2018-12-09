@@ -2,5 +2,4 @@
 
 - hosts: vagrantselect
   roles:
-    - juju4.chrome-config
-
+    - juju4.chrome_config
