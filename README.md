@@ -54,6 +54,12 @@ $ vagrant ssh
 
 ## Troubleshooting & Known issues
 
+## FAQ
+
+* How to assess extension security and privacy?
+Outside of your own assessment, Duosecurity offers a great tool
+https://duo.com/blog/crxcavator
+https://crxcavator.io/
 
 ## License
 
