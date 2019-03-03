@@ -54,6 +54,9 @@ $ vagrant ssh
 
 ## Troubleshooting & Known issues
 
+* To validate chrome configuration, you can check chrome://policy and chrome://management.
+  Pay attention to typo and trailing space!
+
 ## FAQ
 
 * How to assess extension security and privacy?
