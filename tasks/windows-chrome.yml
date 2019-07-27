@@ -2,7 +2,7 @@
 
 ## https://developer.chrome.com/extensions/external_extensions
 ## https://stackoverflow.com/questions/8946325/chrome-extension-id-how-to-find-it
-- name: Chrome Extensions
+- name: Windows | Chrome Extensions
   win_regedit:
     key: "HKLM:\\Software\\Wow6432Node\\Google\\Chrome\\Extensions\\{{ item }}"
     value: "update_url"
@@ -10,7 +10,7 @@
     data: "{{ chrome_external_update_url }}"
   with_items: "{{ chrome_extensions }}"
 
-- name: Ensure Auto-update is set once a day
+- name: Windows | Ensure Auto-update is set once a day
   win_regedit:
     key: "HKLM:\\Software\\Policies\\Google\\Update"
     value: "AutoUpdateCheckPeriodMinutes"
