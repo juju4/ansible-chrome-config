@@ -1,0 +1,9 @@
+---
+
+- name: Macos | Set Global policies
+  template:
+    src: "{{ chrome_policies_template_macos }}.j2"
+    dest: "/Library/Managed Preferences/com.google.Chrome.plist"
+    mode: '0644'
+  notify:
+    - plist binary conversion

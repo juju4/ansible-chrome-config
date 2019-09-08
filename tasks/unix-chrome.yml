@@ -15,3 +15,15 @@
     mode: '0644'
     backup: yes
   with_items: "{{ chrome_extensions }}"
+
+- name: Unix | Ensure Global policies directory exists
+  file:
+    dest: "{{ chrome_policies_path }}"
+    mode: '0755'
+    state: directory
+
+- name: Unix | Set Global policies
+  template:
+    src: "{{ chrome_policies_template }}.j2"
+    dest: "{{ chrome_policies_path }}/{{ chrome_policies_template | basename }}"
+    mode: '0644'

@@ -17,5 +17,8 @@
 - include: unix-chrome.yml
   when: ansible_os_family != "Windows"
 
+- include: darwin.yml
+  when: ansible_os_family == 'Darwin'
+
 - include: windows-chrome.yml
   when: ansible_os_family == "Windows"
