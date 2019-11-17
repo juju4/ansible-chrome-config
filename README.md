@@ -64,6 +64,10 @@ Outside of your own assessment, Duosecurity offers a great tool
 https://duo.com/blog/crxcavator
 https://crxcavator.io/
 
+* Available policies:
+https://www.chromium.org/administrators/policy-list-3
+https://cloud.google.com/docs/chrome-enterprise/policies/
+
 ## License
 
 BSD 2-clause
