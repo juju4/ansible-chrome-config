@@ -1,5 +1,25 @@
 ---
 
 - hosts: all
+  vars:
+    chrome_blockedhost_extensions_list:
+      - extension: '*'
+        runtime:
+          - "*://*.example.com"
+          - "*://mail.google.com"
+          - "*://*.github.com"
+    chrome_allowedhost_extensions_list:
+      - extension: 'cjpalhdlnbpafiamejdnhcphjbkeiagm'
+        runtime:
+          - "http://*"
+          - "https://*"
+      - extension: 'gcbommkclmclpchllfjekcdonpmejbdp'
+        runtime:
+          - "http://*"
+          - "https://*"
+      - extension: 'pkehgijcmpdhfbdbbnkijodmdjhbjlgp'
+        runtime:
+          - "http://*"
+          - "https://*"
   roles:
     - juju4.chrome_config

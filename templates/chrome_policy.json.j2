@@ -26,6 +26,32 @@
     "ExtensionInstallBlacklist": ["*"],
     "ExtensionInstallWhitelist": ["cjpalhdlnbpafiamejdnhcphjbkeiagm", "gcbommkclmclpchllfjekcdonpmejbdp", "pkehgijcmpdhfbdbbnkijodmdjhbjlgp", "klbibkeccnjlkjkiokjodocebajanakg"],
     "ExtensionInstallForcelist": ["cjpalhdlnbpafiamejdnhcphjbkeiagm;https://clients2.google.com/service/update2/crx", "gcbommkclmclpchllfjekcdonpmejbdp", "pkehgijcmpdhfbdbbnkijodmdjhbjlgp", "hjdoplcnndgiblooccencgcggcoihigg", "mcbpblocgmgfnpjjppndjkmgjaogfceg"],
+{% if chrome_blockedhost_extensions_list is defined or chrome_allowedhost_extensions_list is defined %}
+    "ExtensionSettings": {
+{% if chrome_blockedhost_extensions_list is defined and chrome_blockedhost_extensions_list %}
+{% for i in chrome_blockedhost_extensions_list %}
+        "{{ i.extension }}": {
+            "runtime_blocked_hosts": [
+{% for h in i.runtime %}
+                "{{ h }}",
+{% endfor %}
+            ]
+        }{% if not loop.last or (chrome_allowedhost_extensions_list is defined and chrome_allowedhost_extensions_list) %},{% endif %}
+{% endfor %}
+{% endif %}
+{% if chrome_allowedhost_extensions_list is defined and chrome_allowedhost_extensions_list %}
+{% for i in chrome_allowedhost_extensions_list %}
+        "{{ i.extension }}": {
+            "runtime_allowed_hosts": [
+{% for h in i.runtime %}
+                "{{ h }}",
+{% endfor %}
+            ]
+        }{% if not loop.last %},{% endif %}
+{% endfor %}
+{% endif %}
+    },
+{% endif %}
     "HideWebStoreIcon": true,
     "Http09OnNonDefaultPortsEnabled": false,
     "ImportAutofillFormData": false,
