@@ -37,6 +37,7 @@
 {% endfor %}
             ]
         }{% if not loop.last or (chrome_allowedhost_extensions_list is defined and chrome_allowedhost_extensions_list) %},{% endif %}
+
 {% endfor %}
 {% endif %}
 {% if chrome_allowedhost_extensions_list is defined and chrome_allowedhost_extensions_list %}
@@ -48,6 +49,7 @@
 {% endfor %}
             ]
         }{% if not loop.last %},{% endif %}
+
 {% endfor %}
 {% endif %}
     },
