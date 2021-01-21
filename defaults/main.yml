@@ -17,6 +17,11 @@ chrome_policies_template_macos: com.google.Chrome.xml.plist
 chrome_policies_path: /etc/chromium-browser/policies/managed/
 #chrome_policies_path: /etc/opt/chrome/policies/managed/
 
+chrome_extension_blacklist:
+    - "*"
+chrome_extension_whitelist: "{{ chrome_extensions }}"
+chrome_extension_force: "{{ chrome_extensions }}"
+
 # https://github.com/mandatoryprogrammer/ChromeGalvanizer
 chrome_blockedhost_extensions_list: []
 chrome_allowedhost_extensions_list: []
