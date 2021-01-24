@@ -19,8 +19,17 @@ chrome_policies_path: /etc/chromium-browser/policies/managed/
 
 chrome_extension_blacklist:
     - "*"
-chrome_extension_whitelist: "{{ chrome_extensions }}"
-chrome_extension_force: "{{ chrome_extensions }}"
+chrome_extension_whitelist:
+    - "cjpalhdlnbpafiamejdnhcphjbkeiagm"
+    - "gcbommkclmclpchllfjekcdonpmejbdp"
+    - "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
+    - "klbibkeccnjlkjkiokjodocebajanakg"
+chrome_extension_force:
+    - "cjpalhdlnbpafiamejdnhcphjbkeiagm;https://clients2.google.com/service/update2/crx"
+    - "gcbommkclmclpchllfjekcdonpmejbdp"
+    - "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
+    - "hjdoplcnndgiblooccencgcggcoihigg"
+    - "mcbpblocgmgfnpjjppndjkmgjaogfceg"
 
 # https://github.com/mandatoryprogrammer/ChromeGalvanizer
 chrome_blockedhost_extensions_list: []
