@@ -15,27 +15,27 @@ chrome_policies_template: chrome_policy.json
 chrome_policies_template_macos: com.google.Chrome.xml.plist
 # Linux: chromium or chrome path
 chrome_policies_path: /etc/chromium-browser/policies/managed/
-#chrome_policies_path: /etc/opt/chrome/policies/managed/
+# chrome_policies_path: /etc/opt/chrome/policies/managed/
 
 # https://github.com/mandatoryprogrammer/ChromeGalvanizer
 chrome_blockedhost_extensions_list: []
 chrome_allowedhost_extensions_list: []
-#chrome_blockedhost_extensions_list:
-#  - extension: '*'
-#    runtime:
-#      - "*://*.example.com"
-#      - "*://mail.google.com"
-#      - "*://*.github.com"
-#chrome_allowedhost_extensions_list:
-#  - extension: 'cjpalhdlnbpafiamejdnhcphjbkeiagm'
-#    runtime:
-#      - "http://*"
-#      - "https://*"
-#  - extension: 'gcbommkclmclpchllfjekcdonpmejbdp'
-#    runtime:
-#      - "http://*"
-#      - "https://*"
-#  - extension: 'pkehgijcmpdhfbdbbnkijodmdjhbjlgp'
-#    runtime:
-#      - "http://*"
-#      - "https://*"
+# chrome_blockedhost_extensions_list:
+#   - extension: '*'
+#     runtime:
+#       - "*://*.example.com"
+#       - "*://mail.google.com"
+#       - "*://*.github.com"
+# chrome_allowedhost_extensions_list:
+#   - extension: 'cjpalhdlnbpafiamejdnhcphjbkeiagm'
+#     runtime:
+#       - "http://*"
+#       - "https://*"
+#   - extension: 'gcbommkclmclpchllfjekcdonpmejbdp'
+#     runtime:
+#       - "http://*"
+#       - "https://*"
+#   - extension: 'pkehgijcmpdhfbdbbnkijodmdjhbjlgp'
+#     runtime:
+#       - "http://*"
+#       - "https://*"
