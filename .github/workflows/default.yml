@@ -98,5 +98,5 @@ jobs:
           chromium-browser --headless --dump-dom https://www.google.com/ || true
           chromium-browser --headless --dump-dom chrome://policy/ || true
           chromium-browser --headless --dump-html chrome://policy/ || true
-        if: ${{ always() }} and ${{ matrix.os != 'windows-latest'}}
+        if: ${{ always() }} and ${{ matrix.os != 'windows-latest'}} and ${{ matrix.os != 'macos-latest'}}
         continue-on-error: true
