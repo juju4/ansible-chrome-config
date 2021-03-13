@@ -1,5 +1,8 @@
 [![Build Status - Master](https://travis-ci.org/juju4/ansible-chrome-config.svg?branch=master)](https://travis-ci.org/juju4/ansible-chrome-config)
 [![Build Status - Devel](https://travis-ci.org/juju4/ansible-chrome-config.svg?branch=devel)](https://travis-ci.org/juju4/ansible-chrome-config/branches)
+
+[![Actions Status - Master](https://github.com/juju4/ansible-chrome-config/workflows/AnsibleCI/badge.svg)](https://github.com/juju4/ansible-chrome-config/actions?query=branch%3Amaster)
+[![Actions Status - Devel](https://github.com/juju4/ansible-chrome-config/workflows/AnsibleCI/badge.svg?branch=devel)](https://github.com/juju4/ansible-chrome-config/actions?query=branch%3Adevel)
 # Chrome configuration ansible role
 
 Ansible role to setup Chrome system-wide
