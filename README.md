@@ -71,4 +71,3 @@ https://cloud.google.com/docs/chrome-enterprise/policies/
 ## License
 
 BSD 2-clause
-
