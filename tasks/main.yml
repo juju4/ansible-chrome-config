@@ -14,11 +14,11 @@
   include_vars: "{{ ansible_distribution }}.yml"
   when: ansible_os_family == "Alpine" or ansible_distribution == 'MacOSX'
 
-- include: unix-chrome.yml
+- import_tasks: unix-chrome.yml
   when: ansible_os_family != "Windows"
 
-- include: darwin.yml
+- import_tasks: darwin.yml
   when: ansible_os_family == 'Darwin'
 
-- include: windows-chrome.yml
+- import_tasks: windows-chrome.yml
   when: ansible_os_family == "Windows"
