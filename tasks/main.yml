@@ -1,17 +1,17 @@
 ---
 
 - name: Include Linux variables
-  include_vars: Linux.yml
+  ansible.builtin.include_vars: Linux.yml
   when: ansible_system == 'Linux'
 
 - name: Include version-specific variables for Ubuntu.
-  include_vars: "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
+  ansible.builtin.include_vars: "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
   when: ansible_distribution == 'Ubuntu'
 - name: Include version-specific variables for RedHat
-  include_vars: "RedHat-{{ ansible_distribution_version.split('.')[0] }}.yml"
+  ansible.builtin.include_vars: "RedHat-{{ ansible_distribution_version.split('.')[0] }}.yml"
   when: ansible_os_family == "RedHat"
 - name: Include other distribution-specific variables
-  include_vars: "{{ ansible_distribution }}.yml"
+  ansible.builtin.include_vars: "{{ ansible_distribution }}.yml"
   when: ansible_os_family == "Alpine" or ansible_distribution == 'MacOSX'
 
 - import_tasks: unix-chrome.yml

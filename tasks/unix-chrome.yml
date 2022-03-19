@@ -1,7 +1,7 @@
 ---
 
 - name: Ensure extensions directory exists
-  file:
+  ansible.builtin.file:
     dest: "{{ chrome_prefs_path }}"
     state: directory
     mode: '0755'
@@ -9,7 +9,7 @@
 ## https://developer.chrome.com/extensions/external_extensions
 ## https://stackoverflow.com/questions/8946325/chrome-extension-id-how-to-find-it
 - name: Chrome Extensions
-  template:
+  ansible.builtin.template:
     src: "{{ chrome_extensions_prefs_template }}"
     dest: "{{ chrome_prefs_path }}/{{ item }}.json"
     mode: '0644'
@@ -17,13 +17,13 @@
   with_items: "{{ chrome_extensions }}"
 
 - name: Unix | Ensure Global policies directory exists
-  file:
+  ansible.builtin.file:
     dest: "{{ chrome_policies_path }}"
     mode: '0755'
     state: directory
 
 - name: Unix | Set Global policies
-  template:
+  ansible.builtin.template:
     src: "{{ chrome_policies_template }}.j2"
     dest: "{{ chrome_policies_path }}/{{ chrome_policies_template | basename }}"
     mode: '0644'

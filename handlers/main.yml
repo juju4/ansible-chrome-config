@@ -1,6 +1,6 @@
 ---
 
 - name: plist binary conversion
-  command: plutil -convert binary1 com.google.Chrome.plist
+  ansible.builtin.command: plutil -convert binary1 com.google.Chrome.plist
   args:
     chdir: "/Library/Managed Preferences"

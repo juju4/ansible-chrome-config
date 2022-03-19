@@ -1,13 +1,13 @@
 ---
 
 - name: Macos | Ensure Managed preferences directory exists
-  file:
+  ansible.builtin.file:
     dest: "/Library/Managed Preferences"
     mode: '0755'
     state: directory
 
 - name: Macos | Set Global policies
-  template:
+  ansible.builtin.template:
     src: "{{ chrome_policies_template_macos }}.j2"
     dest: "/Library/Managed Preferences/com.google.Chrome.plist"
     mode: '0644'
