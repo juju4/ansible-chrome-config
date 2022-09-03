@@ -12,4 +12,4 @@
     dest: "/Library/Managed Preferences/com.google.Chrome.plist"
     mode: '0644'
   notify:
-    - plist binary conversion
+    - Plist binary conversion
