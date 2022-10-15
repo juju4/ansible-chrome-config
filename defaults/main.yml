@@ -1,11 +1,10 @@
 ---
 
-## uBlock Origin, https everywhere, privacy badger, the great suspender
+## uBlock Origin, https everywhere, privacy badger
 chrome_extensions:
     - cjpalhdlnbpafiamejdnhcphjbkeiagm
     - gcbommkclmclpchllfjekcdonpmejbdp
     - pkehgijcmpdhfbdbbnkijodmdjhbjlgp
-    - klbibkeccnjlkjkiokjodocebajanakg
 
 chrome_extensions_prefs_template: extensionid.json.j2
 chrome_external_update_url: "https://clients2.google.com/service/update2/crx"
@@ -20,16 +19,25 @@ chrome_policies_path: /etc/chromium-browser/policies/managed/
 chrome_extension_blacklist:
     - "*"
 chrome_extension_whitelist:
+    # https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
     - "cjpalhdlnbpafiamejdnhcphjbkeiagm"
+    # https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp
     - "gcbommkclmclpchllfjekcdonpmejbdp"
+    # https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp
     - "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
-    - "klbibkeccnjlkjkiokjodocebajanakg"
+    # https://chrome.google.com/webstore/detail/terms-of-service-didn%E2%80%99t-r/hjdoplcnndgiblooccencgcggcoihigg
+    - "hjdoplcnndgiblooccencgcggcoihigg"
+    # https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg
+    - "mcbpblocgmgfnpjjppndjkmgjaogfceg"
+    # https://chrome.google.com/webstore/detail/consent-o-matic/mdjildafknihdffpkfmmpnpoiajfjnjd
+    - "mdjildafknihdffpkfmmpnpoiajfjnjd"
 chrome_extension_force:
-    - "cjpalhdlnbpafiamejdnhcphjbkeiagm;https://clients2.google.com/service/update2/crx"
+    - "cjpalhdlnbpafiamejdnhcphjbkeiagm"
     - "gcbommkclmclpchllfjekcdonpmejbdp"
     - "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
     - "hjdoplcnndgiblooccencgcggcoihigg"
     - "mcbpblocgmgfnpjjppndjkmgjaogfceg"
+    - "mdjildafknihdffpkfmmpnpoiajfjnjd"
 
 # https://github.com/mandatoryprogrammer/ChromeGalvanizer
 chrome_blockedhost_extensions_list: []
