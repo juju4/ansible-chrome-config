@@ -14,11 +14,14 @@
   ansible.builtin.include_vars: "{{ ansible_distribution }}.yml"
   when: ansible_os_family == "Alpine" or ansible_distribution == 'MacOSX'
 
-- import_tasks: unix-chrome.yml
+- name: Import unix-chrome
+  ansible.builtin.import_tasks: unix-chrome.yml
   when: ansible_os_family != "Windows"
 
-- import_tasks: darwin.yml
+- name: Import darwin
+  ansible.builtin.import_tasks: darwin.yml
   when: ansible_os_family == 'Darwin'
 
-- import_tasks: windows-chrome.yml
+- name: Import windows-chrome
+  ansible.builtin.import_tasks: windows-chrome.yml
   when: ansible_os_family == "Windows"
