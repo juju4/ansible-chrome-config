@@ -68,6 +68,8 @@ https://crxcavator.io/
 https://www.chromium.org/administrators/policy-list-3
 https://cloud.google.com/docs/chrome-enterprise/policies/
 
+* [Download a file - Blocked third-party cookies can prevent Drive Web downloads](https://support.google.com/drive/answer/2423534)
+
 ## License
 
 BSD 2-clause
