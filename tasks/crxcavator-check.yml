@@ -19,4 +19,4 @@
 - name: Crxcavator extensions results
   ansible.builtin.debug:
     var: item
-  loop: "{{ extreports | community.general.json_query('[-1:].[data.webstore.name, data.extension_id, data.webstore.rating, data.risk.csp.total, data.risk.permissions.total, data.risk.webstore.total]') }}"
+  loop: "{{ extreports | community.general.json_query('[].[-1:].[data.webstore.name, data.extension_id, data.webstore.rating, data.risk.csp.total, data.risk.permissions.total, data.risk.webstore.total]') }}"
