@@ -5,7 +5,7 @@
     msg: "https://api.crxcavator.io/v1/report/{{ item }}/"
   # loop: "{{ chrome_extensions + chrome_extension_whitelist + chrome_extension_force }}"
   loop:
-    - cjpalhdlnbpafiamejdnhcphjbkeiagm
+    - bfjbejmeoibbdpfdbmbacmefcbannnbg
 
 - name: Retrieve data from crxcavator
   ansible.builtin.uri:
@@ -14,9 +14,18 @@
   register: extreports
   # loop: "{{ chrome_extensions + chrome_extension_whitelist + chrome_extension_force }}"
   loop:
-    - cjpalhdlnbpafiamejdnhcphjbkeiagm
+    - bfjbejmeoibbdpfdbmbacmefcbannnbg
 
 # jq -r '.[-1] | [.data.webstore.name, .extension_id, .data.webstore.rating, .data.risk.csp.total, .data.risk.permissions.total, .data.risk.webstore.total]'
+- name: Crxcavator extensions results
+  ansible.builtin.debug:
+    var: item
+  # loop: "{{ extreports.content | community.general.json_query('[-1:].[data.webstore.name, data.extension_id, data.webstore.rating, data.risk.csp.total, data.risk.permissions.total, data.risk.webstore.total]') }}"
+  loop: "{{ extreports.content }}"
+- name: Crxcavator extensions results
+  ansible.builtin.debug:
+    var: item
+  loop: "{{ extreports.content | community.general.json_query('[-1:]') }}"
 - name: Crxcavator extensions results
   ansible.builtin.debug:
     var: item
