@@ -25,3 +25,9 @@
 - name: Import windows-chrome
   ansible.builtin.import_tasks: windows-chrome.yml
   when: ansible_os_family == "Windows"
+
+- name: Import crxcavator-check
+  ansible.builtin.import_tasks: crxcavator-check.yml
+  when:
+    - ansible_os_family != "Windows"
+    - chrome_config_crxcavator_check | bool

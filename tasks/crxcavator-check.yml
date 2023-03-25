@@ -1,0 +1,13 @@
+---
+
+- name: Retrieve data from crxcavator
+  ansible.builtin.uri:
+    url: "https://api.crxcavator.io/v1/report/{{ item }}"
+    return_content: true
+  register: extreports
+  loop: "{{ chrome_extensions + chrome_extension_blacklist + chrome_extension_whitelist + chrome_extension_force }}"
+
+- name: Crxcavator extensions results
+  ansible.builtin.debug:
+    var: item
+  loop: "{{ extreports | community.general.json_query('[-1:].[data.webstore.name, data.extension_id, data.webstore.rating, data.risk.csp.total, data.risk.permissions.total, data.risk.webstore.total]') }}"

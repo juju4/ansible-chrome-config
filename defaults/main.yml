@@ -1,6 +1,6 @@
 ---
 
-## uBlock Origin, https everywhere, privacy badger
+## uBlock Origin, https everywhere, privacy badger, mitaka
 chrome_extensions:
     - cjpalhdlnbpafiamejdnhcphjbkeiagm
     - gcbommkclmclpchllfjekcdonpmejbdp
@@ -31,6 +31,8 @@ chrome_extension_whitelist:
     - "mcbpblocgmgfnpjjppndjkmgjaogfceg"
     # https://chrome.google.com/webstore/detail/consent-o-matic/mdjildafknihdffpkfmmpnpoiajfjnjd
     - "mdjildafknihdffpkfmmpnpoiajfjnjd"
+    # https://chrome.google.com/webstore/detail/mitaka/bfjbejmeoibbdpfdbmbacmefcbannnbg
+    - "bfjbejmeoibbdpfdbmbacmefcbannnbg"
 chrome_extension_force:
     - "cjpalhdlnbpafiamejdnhcphjbkeiagm"
     - "gcbommkclmclpchllfjekcdonpmejbdp"
@@ -61,3 +63,5 @@ chrome_allowedhost_extensions_list: []
 #     runtime:
 #       - "http://*"
 #       - "https://*"
+
+chrome_config_crxcavator_check: false
