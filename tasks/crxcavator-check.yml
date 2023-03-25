@@ -20,12 +20,12 @@
 - name: Crxcavator extensions results
   ansible.builtin.debug:
     msg: "{{ item.content }}"
-  loop: "{{ extreports }}"
+  loop: "{{ extreports.results }}"
 - name: Crxcavator extensions results
   ansible.builtin.debug:
     msg: "{{ item.content | community.general.json_query('[-1:]') }}"
-  loop: "{{ extreports }}"
+  loop: "{{ extreports.results }}"
 - name: Crxcavator extensions results
   ansible.builtin.debug:
     msg: "{{ item.content | community.general.json_query('[-1:].[data.webstore.name, data.extension_id, data.webstore.rating, data.risk.csp.total, data.risk.permissions.total, data.risk.webstore.total]') }}"
-  loop: "{{ extreports }}"
+  loop: "{{ extreports.results }}"
