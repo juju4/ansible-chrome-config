@@ -5,7 +5,9 @@
     url: "https://api.crxcavator.io/v1/report/{{ item }}"
     return_content: true
   register: extreports
-  loop: "{{ chrome_extensions + chrome_extension_whitelist + chrome_extension_force }}"
+  # loop: "{{ chrome_extensions + chrome_extension_whitelist + chrome_extension_force }}"
+  loop:
+    - cjpalhdlnbpafiamejdnhcphjbkeiagm
 
 - name: Crxcavator extensions results
   ansible.builtin.debug:
