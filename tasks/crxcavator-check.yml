@@ -2,14 +2,14 @@
 
 - name: Debug | uri
   ansible.builtin.debug:
-    msg: "https://api.crxcavator.io/v1/report/{{ item }}"
+    msg: "https://api.crxcavator.io/v1/report/{{ item }}/"
   # loop: "{{ chrome_extensions + chrome_extension_whitelist + chrome_extension_force }}"
   loop:
     - cjpalhdlnbpafiamejdnhcphjbkeiagm
 
 - name: Retrieve data from crxcavator
   ansible.builtin.uri:
-    url: "https://api.crxcavator.io/v1/report/{{ item }}"
+    url: "https://api.crxcavator.io/v1/report/{{ item }}/"
     return_content: true
   register: extreports
   # loop: "{{ chrome_extensions + chrome_extension_whitelist + chrome_extension_force }}"
