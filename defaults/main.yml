@@ -31,6 +31,8 @@ chrome_extension_whitelist:
     - "mcbpblocgmgfnpjjppndjkmgjaogfceg"
     # https://chrome.google.com/webstore/detail/consent-o-matic/mdjildafknihdffpkfmmpnpoiajfjnjd
     - "mdjildafknihdffpkfmmpnpoiajfjnjd"
+    # https://chrome.google.com/webstore/detail/cookieblock/fbhiolckidkciamgcobkokpelckgnnol
+    - "fbhiolckidkciamgcobkokpelckgnnol"
 chrome_extension_force:
     - "cjpalhdlnbpafiamejdnhcphjbkeiagm"
     - "gcbommkclmclpchllfjekcdonpmejbdp"
@@ -38,6 +40,7 @@ chrome_extension_force:
     - "hjdoplcnndgiblooccencgcggcoihigg"
     - "mcbpblocgmgfnpjjppndjkmgjaogfceg"
     - "mdjildafknihdffpkfmmpnpoiajfjnjd"
+    - "fbhiolckidkciamgcobkokpelckgnnol"
 
 # https://github.com/mandatoryprogrammer/ChromeGalvanizer
 chrome_blockedhost_extensions_list: []
