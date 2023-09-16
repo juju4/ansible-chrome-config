@@ -84,6 +84,7 @@ jobs:
           ls -lA /usr/share/google-chrome/extensions/ || true
           cat /usr/share/google-chrome/extensions/*.json || true
           cat /etc/chromium-browser/policies/managed/*.json || true
+          cat '/Library/Managed Preferences/com.google.Chrome.plist' || true
         if: ${{ always() }} and ${{ matrix.os != 'windows-latest'}}
         continue-on-error: true
       # https://developers.google.com/web/updates/2017/04/headless-chrome
