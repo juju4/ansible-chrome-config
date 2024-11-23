@@ -84,7 +84,7 @@ jobs:
           ls -lA /usr/share/google-chrome/extensions/ || true
           cat /usr/share/google-chrome/extensions/*.json || true
           cat /etc/chromium-browser/policies/managed/*.json || true
-        if: ${{ always() }} and ${{ matrix.os == 'ubuntu-latest'}}
+        if: ${{ matrix.os == 'ubuntu-latest'}}
         continue-on-error: true
       - name: After script - files macos
         run: |
@@ -93,15 +93,27 @@ jobs:
           plutil -convert xml1 '/Library/Managed Preferences/com.google.Chrome.plist' || true
           cat '/Library/Managed Preferences/com.google.Chrome.plist' || true
           ls /Applications || true
-        if: ${{ always() }} and ${{ matrix.os == 'macos-latest'}}
+          ls /Applications/Google\ Chrome || true
+        if: ${{ matrix.os == 'macos-latest'}}
         continue-on-error: true
       # https://developers.google.com/web/updates/2017/04/headless-chrome
       # https://bugs.chromium.org/p/chromium/issues/detail?id=752747
-      - name: After script - chrome headless
+      - name: After script - chrome headless - linux
         run: |
           chromium-browser --headless --screenshot=chrome.png https://www.google.com/ || true
+          ls
           chromium-browser --headless --dump-dom https://www.google.com/ || true
-          chromium-browser --headless --dump-dom chrome://policy/ || true
-          chromium-browser --headless --dump-html chrome://policy/ || true
-        if: ${{ always() }} and ${{ matrix.os != 'windows-latest'}} and ${{ matrix.os != 'macos-latest'}}
+          # chromium-browser --headless --dump-dom chrome://policy/ || true
+          # chromium-browser --headless --dump-html chrome://policy/ || true
+        if: ${{ matrix.os == 'ubuntu-latest'}}
+        continue-on-error: true
+      - name: After script - chrome headless - macos
+        run: |
+          export chromeapp="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+          "$chromeapp" --headless --screenshot=chrome.png https://www.google.com/ || true
+          ls
+          "$chromeapp" --headless --dump-dom https://www.google.com/ || true
+          "$chromeapp" --headless --dump-dom chrome://policy/ || true
+          "$chromeapp" --headless --dump-html chrome://policy/ || true
+        if: ${{ matrix.os == 'ubuntu-latest'}}
         continue-on-error: true
