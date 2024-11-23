@@ -79,13 +79,21 @@ jobs:
           ping -c 1 8.8.8.8 || true
         if: ${{ failure() }} and ${{ matrix.os != 'windows-latest'}}
         continue-on-error: true
-      - name: After script - files
+      - name: After script - linux files
         run: |
           ls -lA /usr/share/google-chrome/extensions/ || true
           cat /usr/share/google-chrome/extensions/*.json || true
           cat /etc/chromium-browser/policies/managed/*.json || true
+        if: ${{ always() }} and ${{ matrix.os == 'ubuntu-latest'}}
+        continue-on-error: true
+      - name: After script - files macos
+        run: |
+          cat /etc/chromium-browser/policies/managed/*.json || true
           cat '/Library/Managed Preferences/com.google.Chrome.plist' || true
-        if: ${{ always() }} and ${{ matrix.os != 'windows-latest'}}
+          plutil -convert xml1 '/Library/Managed Preferences/com.google.Chrome.plist' || true
+          cat '/Library/Managed Preferences/com.google.Chrome.plist' || true
+          ls /Applications || true
+        if: ${{ always() }} and ${{ matrix.os == 'macos-latest'}}
         continue-on-error: true
       # https://developers.google.com/web/updates/2017/04/headless-chrome
       # https://bugs.chromium.org/p/chromium/issues/detail?id=752747
