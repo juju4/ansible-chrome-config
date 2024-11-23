@@ -93,7 +93,7 @@ jobs:
           plutil -convert xml1 '/Library/Managed Preferences/com.google.Chrome.plist' || true
           cat '/Library/Managed Preferences/com.google.Chrome.plist' || true
           ls /Applications || true
-          ls /Applications/Google\ Chrome || true
+          ls /Applications/Google\ Chrome.app/ || true
         if: ${{ matrix.os == 'macos-latest'}}
         continue-on-error: true
       # https://developers.google.com/web/updates/2017/04/headless-chrome
@@ -115,5 +115,5 @@ jobs:
           "$chromeapp" --headless --dump-dom https://www.google.com/ || true
           "$chromeapp" --headless --dump-dom chrome://policy/ || true
           "$chromeapp" --headless --dump-html chrome://policy/ || true
-        if: ${{ matrix.os == 'ubuntu-latest'}}
+        if: ${{ matrix.os == 'macos-latest'}}
         continue-on-error: true
