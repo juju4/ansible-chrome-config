@@ -33,6 +33,8 @@ chrome_extension_whitelist:
     - "mdjildafknihdffpkfmmpnpoiajfjnjd"
     # https://chrome.google.com/webstore/detail/cookieblock/fbhiolckidkciamgcobkokpelckgnnol
     - "fbhiolckidkciamgcobkokpelckgnnol"
+    # https://chromewebstore.google.com/detail/fake-news-debunker-by-inv/mhccpoafgdgbhnjfhkcmgknndkeenfhe
+    - "mhccpoafgdgbhnjfhkcmgknndkeenfhe"
 chrome_extension_force:
     - "cjpalhdlnbpafiamejdnhcphjbkeiagm"
     - "gcbommkclmclpchllfjekcdonpmejbdp"
@@ -41,6 +43,7 @@ chrome_extension_force:
     - "mcbpblocgmgfnpjjppndjkmgjaogfceg"
     - "mdjildafknihdffpkfmmpnpoiajfjnjd"
     - "fbhiolckidkciamgcobkokpelckgnnol"
+    - "mhccpoafgdgbhnjfhkcmgknndkeenfhe"
 
 # https://github.com/mandatoryprogrammer/ChromeGalvanizer
 chrome_blockedhost_extensions_list: []
