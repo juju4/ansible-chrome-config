@@ -112,7 +112,7 @@ jobs:
           export chromeapp="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
           "$chromeapp" --headless --screenshot=chrome.png https://www.google.com/ || true
           ls
-          "$chromeapp" --headless --dump-dom https://www.google.com/ || true
+          # "$chromeapp" --headless --dump-dom https://www.google.com/ || true
           # "$chromeapp" --headless --dump-dom chrome://policy/ || true
           # "$chromeapp" --headless --dump-html chrome://policy/ || true
         if: ${{ matrix.os == 'macos-latest'}}
