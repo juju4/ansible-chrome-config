@@ -15,9 +15,9 @@ chrome_policies_template_macos: com.google.Chrome.xml.plist
 chrome_policies_path: /etc/chromium-browser/policies/managed/
 # chrome_policies_path: /etc/opt/chrome/policies/managed/
 
-chrome_extension_blacklist:
+chrome_extension_blocklist:
     - "*"
-chrome_extension_whitelist:
+chrome_extension_allowlist:
     # https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
     - "cjpalhdlnbpafiamejdnhcphjbkeiagm"
     # https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp

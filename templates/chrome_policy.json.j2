@@ -30,8 +30,8 @@
     "DefaultWebBluetoothGuardSetting": 2,
     "DisablePrintPreview": false,
     "DownloadRestrictions": 1,
-    "ExtensionInstallBlacklist": [{% for entry in chrome_extension_blacklist %}"{{ entry }}"{% if not loop.last %},{% endif %}{% endfor %}],
-    "ExtensionInstallWhitelist": [{% for entry in chrome_extension_whitelist %}"{{ entry }}"{% if not loop.last %},{% endif %}{% endfor %}],
+    "ExtensionInstallBlocklist": [{% for entry in chrome_extension_blocklist %}"{{ entry }}"{% if not loop.last %},{% endif %}{% endfor %}],
+    "ExtensionInstallAllowlist": [{% for entry in chrome_extension_allowlist %}"{{ entry }}"{% if not loop.last %},{% endif %}{% endfor %}],
     "ExtensionInstallForcelist": [{% for entry in chrome_extension_force %}"{{ entry }}"{% if not loop.last %},{% endif %}{% endfor %}],
 {% if chrome_blockedhost_extensions_list is defined or chrome_allowedhost_extensions_list is defined %}
     "ExtensionSettings": {
