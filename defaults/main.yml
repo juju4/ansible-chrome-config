@@ -32,6 +32,8 @@ chrome_extension_allowlist:
     - "fbhiolckidkciamgcobkokpelckgnnol"
     # https://chromewebstore.google.com/detail/fake-news-debunker-by-inv/mhccpoafgdgbhnjfhkcmgknndkeenfhe
     - "mhccpoafgdgbhnjfhkcmgknndkeenfhe"
+    # https://chromewebstore.google.com/detail/duckduckgo-privacy-essent/bkdgflcldnnnapblkhphbgpggdiikppg
+    - "bkdgflcldnnnapblkhphbgpggdiikppg"
 chrome_extension_force:
     - "cjpalhdlnbpafiamejdnhcphjbkeiagm"
     - "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
