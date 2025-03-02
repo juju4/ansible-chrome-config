@@ -35,7 +35,6 @@ chrome_extension_whitelist:
 chrome_extension_force:
     - "cjpalhdlnbpafiamejdnhcphjbkeiagm"
     - "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
-    - "hjdoplcnndgiblooccencgcggcoihigg"
     - "mcbpblocgmgfnpjjppndjkmgjaogfceg"
     - "mdjildafknihdffpkfmmpnpoiajfjnjd"
     - "fbhiolckidkciamgcobkokpelckgnnol"
