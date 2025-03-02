@@ -38,7 +38,8 @@
         "{{ i.extension }}": {
             "runtime_blocked_hosts": [
 {% for h in i.runtime %}
-                "{{ h }}",
+                "{{ h }}"{% if not loop.last %},{% endif %}
+
 {% endfor %}
             ]
         }{% if not loop.last or (chrome_allowedhost_extensions_list is defined and chrome_allowedhost_extensions_list) %},{% endif %}
@@ -50,7 +51,8 @@
         "{{ i.extension }}": {
             "runtime_allowed_hosts": [
 {% for h in i.runtime %}
-                "{{ h }}",
+                "{{ h }}"{% if not loop.last %},{% endif %}
+
 {% endfor %}
             ]
         }{% if not loop.last %},{% endif %}

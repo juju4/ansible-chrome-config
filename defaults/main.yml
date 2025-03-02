@@ -12,8 +12,8 @@ chrome_external_update_url: "https://clients2.google.com/service/update2/crx"
 chrome_policies_template: chrome_policy.json
 chrome_policies_template_macos: com.google.Chrome.xml.plist
 # Linux: chromium or chrome path
-chrome_policies_path: /etc/chromium-browser/policies/managed/
-# chrome_policies_path: /etc/opt/chrome/policies/managed/
+chrome_policies_path: /etc/chromium/policies/managed
+# chrome_policies_path: /etc/opt/chrome/policies/managed
 
 chrome_extension_blocklist:
     - "*"

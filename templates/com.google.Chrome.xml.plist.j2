@@ -53,18 +53,21 @@
     <integer>1</integer>
     <key>ExtensionInstallBlocklist</key>
     <array>
-        <string>*</string>
+{% for entry in chrome_extension_blocklist %}
+        <string>{{ entry }}</string>
+{% endfor %}
     </array>
     <key>ExtensionInstallAllowlist</key>
     <array>
-        <string>cjpalhdlnbpafiamejdnhcphjbkeiagm</string>
-        <string>gcbommkclmclpchllfjekcdonpmejbdp</string>
-        <string>pkehgijcmpdhfbdbbnkijodmdjhbjlgp</string>
-        <string>klbibkeccnjlkjkiokjodocebajanakg</string>
+{% for entry in chrome_extension_allowlist %}
+        <string>{{ entry }}</string>
+{% endfor %}
     </array>
     <key>ExtensionInstallForcelist</key>
     <array>
-        <string>cjpalhdlnbpafiamejdnhcphjbkeiagm;https://clients2.google.com/service/update2/crx</string>
+{% for entry in chrome_extension_force %}
+        <string>{{ entry }}</string>
+{% endfor %}
     </array>
     <key>HideWebStoreIcon</key>
     <true/>
