@@ -70,6 +70,8 @@ https://cloud.google.com/docs/chrome-enterprise/policies/
 
 * [Download a file - Blocked third-party cookies can prevent Drive Web downloads](https://support.google.com/drive/answer/2423534)
 
+* Example search provider policy taken from [Debian DuckDuckGo policy](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=956012)
+
 ## License
 
 BSD 2-clause
