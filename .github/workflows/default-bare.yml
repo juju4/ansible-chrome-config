@@ -83,7 +83,7 @@ jobs:
         run: |
           ls -lA /usr/share/google-chrome/extensions/ || true
           cat /usr/share/google-chrome/extensions/*.json || true
-          cat /etc/chromium-browser/policies/managed/*.json || true
+          cat /etc/chromium/policies/managed/*.json || true
         if: ${{ matrix.os == 'ubuntu-latest'}}
         continue-on-error: true
       - name: After script - files macos
