@@ -1,9 +1,8 @@
 ---
 
-## uBlock Origin, https everywhere, privacy badger
+## uBlock Origin, privacy badger
 chrome_extensions:
     - cjpalhdlnbpafiamejdnhcphjbkeiagm
-    - gcbommkclmclpchllfjekcdonpmejbdp
     - pkehgijcmpdhfbdbbnkijodmdjhbjlgp
 
 chrome_extensions_prefs_template: extensionid.json.j2
@@ -21,8 +20,6 @@ chrome_extension_blacklist:
 chrome_extension_whitelist:
     # https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
     - "cjpalhdlnbpafiamejdnhcphjbkeiagm"
-    # https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp
-    - "gcbommkclmclpchllfjekcdonpmejbdp"
     # https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp
     - "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
     # https://chrome.google.com/webstore/detail/terms-of-service-didn%E2%80%99t-r/hjdoplcnndgiblooccencgcggcoihigg
@@ -37,7 +34,6 @@ chrome_extension_whitelist:
     - "mhccpoafgdgbhnjfhkcmgknndkeenfhe"
 chrome_extension_force:
     - "cjpalhdlnbpafiamejdnhcphjbkeiagm"
-    - "gcbommkclmclpchllfjekcdonpmejbdp"
     - "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
     - "hjdoplcnndgiblooccencgcggcoihigg"
     - "mcbpblocgmgfnpjjppndjkmgjaogfceg"
@@ -56,10 +52,6 @@ chrome_allowedhost_extensions_list: []
 #       - "*://*.github.com"
 # chrome_allowedhost_extensions_list:
 #   - extension: 'cjpalhdlnbpafiamejdnhcphjbkeiagm'
-#     runtime:
-#       - "http://*"
-#       - "https://*"
-#   - extension: 'gcbommkclmclpchllfjekcdonpmejbdp'
 #     runtime:
 #       - "http://*"
 #       - "https://*"
