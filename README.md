@@ -60,17 +60,21 @@ $ vagrant ssh
 ## FAQ
 
 * How to assess extension security and privacy?
-Outside of your own assessment, Duosecurity offers a great tool
-https://duo.com/blog/crxcavator
-https://crxcavator.io/
+  * own assessment
+  * Duosecurity offers a great tool: https://duo.com/blog/crxcavator, https://crxcavator.io/
+  * https://browserext.info/
 
 * Available policies:
-https://www.chromium.org/administrators/policy-list-3
-https://cloud.google.com/docs/chrome-enterprise/policies/
+  * https://www.chromium.org/administrators/policy-list-3
+  * https://cloud.google.com/docs/chrome-enterprise/policies/
 
 * [Download a file - Blocked third-party cookies can prevent Drive Web downloads](https://support.google.com/drive/answer/2423534)
 
 * Example search provider policy taken from [Debian DuckDuckGo policy](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=956012)
+
+* Chromium-based browsers management resources
+  * https://support.brave.com/hc/en-us/articles/360039248271-Group-Policy
+  * https://github.com/Prowler2/Brave-Browser-GPO-Policy
 
 ## License
 
