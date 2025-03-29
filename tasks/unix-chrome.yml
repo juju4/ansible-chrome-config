@@ -13,6 +13,7 @@
     src: "{{ chrome_extensions_prefs_template }}"
     dest: "{{ chrome_prefs_path }}/{{ item }}.json"
     mode: '0644'
+    validate: 'python3 -mjson.tool %s'
     backup: yes
   with_items: "{{ chrome_extensions }}"
 
