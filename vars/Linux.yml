@@ -1,3 +1,6 @@
 ---
 
 chrome_prefs_path: "/usr/share/google-chrome/extensions"
+
+brave_policies_path: "/etc/brave/policies/managed"
+vivaldi_policies_path: "/etc/vivaldi/policies/managed"
