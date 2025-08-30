@@ -25,7 +25,7 @@ jobs:
       ANSIBLE_EXTRA_VARS: ""
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           path: juju4.chrome_config
       - name: Set up Python
