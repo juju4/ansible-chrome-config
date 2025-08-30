@@ -20,6 +20,8 @@ chrome_extension_blocklist:
 chrome_extension_allowlist:
     # https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
     - "cjpalhdlnbpafiamejdnhcphjbkeiagm"
+    # https://chromewebstore.google.com/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh
+    - "ddkjiahejlhfcafbddmgiahcphecmpfh"
     # https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp
     - "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
     # https://chrome.google.com/webstore/detail/terms-of-service-didn%E2%80%99t-r/hjdoplcnndgiblooccencgcggcoihigg
@@ -34,12 +36,14 @@ chrome_extension_allowlist:
     - "mhccpoafgdgbhnjfhkcmgknndkeenfhe"
     # https://chromewebstore.google.com/detail/duckduckgo-privacy-essent/bkdgflcldnnnapblkhphbgpggdiikppg
     - "bkdgflcldnnnapblkhphbgpggdiikppg"
+    # https://chromewebstore.google.com/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg
+    - "gppongmhjkpfnbhagpmjfkannfbllamg"
 chrome_extension_force:
-    - "cjpalhdlnbpafiamejdnhcphjbkeiagm"
+    - "ddkjiahejlhfcafbddmgiahcphecmpfh"
     - "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
     - "mcbpblocgmgfnpjjppndjkmgjaogfceg"
     - "mdjildafknihdffpkfmmpnpoiajfjnjd"
-    - "fbhiolckidkciamgcobkokpelckgnnol"
+    # - "fbhiolckidkciamgcobkokpelckgnnol"
     - "mhccpoafgdgbhnjfhkcmgknndkeenfhe"
 
 # https://github.com/mandatoryprogrammer/ChromeGalvanizer
