@@ -38,6 +38,8 @@ chrome_extension_allowlist:
     - "bkdgflcldnnnapblkhphbgpggdiikppg"
     # https://chromewebstore.google.com/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg
     - "gppongmhjkpfnbhagpmjfkannfbllamg"
+    # https://chromewebstore.google.com/detail/forensic-osint-full-page/jojaomahhndmeienhjihojidkddkahcn
+    - "jojaomahhndmeienhjihojidkddkahcn"
 chrome_extension_force:
     - "ddkjiahejlhfcafbddmgiahcphecmpfh"
     - "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
