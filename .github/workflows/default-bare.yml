@@ -19,13 +19,21 @@ jobs:
   build:
     permissions:
       contents: read
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ matrix.distribution }}-${{ matrix.version }}
+    continue-on-error: ${{ matrix.experimental }}
     strategy:
       fail-fast: false
       max-parallel: 4
       matrix:
-        # os: [ubuntu-latest, windows-latest, macos-latest]
-        os: [ubuntu-latest, macos-latest]
+        include:
+          - distribution: ubuntu
+            version: 'latest'
+            suite: default
+            experimental: false
+          - distribution: macos
+            version: 'latest'
+            suite: default
+            experimental: false
     env:
       ANSIBLE_CALLBACKS_ENABLED: profile_tasks
       ANSIBLE_EXTRA_VARS: ""
