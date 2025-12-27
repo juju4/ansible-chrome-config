@@ -2,28 +2,28 @@
 
 - name: Include Linux variables
   ansible.builtin.include_vars: Linux.yml
-  when: ansible_system == 'Linux'
+  when: ansible_facts['system'] == 'Linux'
 
 - name: Include variables
   ansible.builtin.include_vars: "{{ lookup('ansible.builtin.first_found', params) }}"
   vars:
     params:
       files:
-        - "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
-        - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
-        - '{{ ansible_distribution }}.yml'
-        - '{{ ansible_os_family }}.yml'
+        - "{{ ansible_facts['distribution'] }}-{{ ansible_facts['distribution_version'] }}.yml"
+        - "{{ ansible_facts['distribution'] }}-{{ ansible_facts['distribution_major_version'] }}.yml"
+        - "{{ ansible_facts['distribution'] }}.yml"
+        - "{{ ansible_facts['os_family'] }}.yml"
       paths:
         - 'vars'
 
 - name: Import unix-chrome
   ansible.builtin.import_tasks: unix-chrome.yml
-  when: ansible_os_family != "Windows"
+  when: ansible_facts['os_family'] != "Windows"
 
 - name: Import darwin
   ansible.builtin.import_tasks: darwin.yml
-  when: ansible_os_family == 'Darwin'
+  when: ansible_facts['os_family'] == 'Darwin'
 
 - name: Import windows-chrome
   ansible.builtin.import_tasks: windows-chrome.yml
-  when: ansible_os_family == "Windows"
+  when: ansible_facts['os_family'] == "Windows"
