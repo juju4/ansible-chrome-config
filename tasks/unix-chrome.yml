@@ -28,3 +28,4 @@
     src: "{{ chrome_policies_template }}.j2"
     dest: "{{ chrome_policies_path }}/{{ chrome_policies_template | basename }}"
     mode: '0644'
+    validate: 'python3 -mjson.tool %s'
