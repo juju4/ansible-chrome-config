@@ -79,18 +79,18 @@ jobs:
           pwd
           env
           find . -ls
-        if: ${{ matrix.os != 'windows-latest'}}
+        if: ${{ matrix.distribution != 'windows'}}
       - name: run test
         run: |
           cd $GITHUB_WORKSPACE/$ANSIBLE_ROLE && ansible-playbook -i localhost, --connection=local --become -vvv test/integration/$ANSIBLE_SUITE/default.yml ${ANSIBLE_EXTRA_VARS}
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
-        if: ${{ matrix.os != 'windows-latest'}}
+        if: ${{ matrix.distribution != 'windows'}}
       - name: idempotency run
         run: |
           cd $GITHUB_WORKSPACE/$ANSIBLE_ROLE && ansible-playbook -i localhost, --connection=local --become -vvv test/integration/$ANSIBLE_SUITE/default.yml ${ANSIBLE_EXTRA_VARS} | tee /tmp/idempotency.log | grep -q 'changed=0.*failed=0'  && (echo 'Idempotence test: pass' && exit 0)  || (echo 'Idempotence test: fail' && cat /tmp/idempotency.log && exit 0)
-        if: ${{ matrix.os != 'windows-latest'}}
+        if: ${{ matrix.distribution != 'windows'}}
       - name: On failure
         run: |
           systemctl -l --no-pager status
@@ -103,19 +103,19 @@ jobs:
           host www.google.com
           ping -c 1 www.google.com || true
           ping -c 1 8.8.8.8 || true
-        if: ${{ failure() }} and ${{ matrix.os != 'windows-latest'}}
+        if: ${{ failure() }} and ${{ matrix.distribution != 'windows'}}
         continue-on-error: true
       - name: After script - ansible setup
         run: |
           ansible -i inventory --connection=local -m setup localhost
-        if: ${{ always() }} and ${{ matrix.os != 'windows-latest'}}
+        if: ${{ always() }} and ${{ matrix.distribution != 'windows'}}
         continue-on-error: true
       - name: After script - linux files
         run: |
           ls -lA /usr/share/google-chrome/extensions/ || true
           cat /usr/share/google-chrome/extensions/*.json || true
           cat /etc/chromium/policies/managed/*.json || true
-        if: ${{ matrix.os == 'ubuntu-latest'}}
+        if: ${{ matrix.distribution == 'ubuntu'}}
         continue-on-error: true
       - name: After script - files macos
         run: |
@@ -125,7 +125,7 @@ jobs:
           cat '/Library/Managed Preferences/com.google.Chrome.plist' || true
           ls /Applications || true
           ls /Applications/Google\ Chrome.app/ || true
-        if: ${{ matrix.os == 'macos-latest'}}
+        if: ${{ matrix.distribution == 'macos'}}
         continue-on-error: true
       # https://developers.google.com/web/updates/2017/04/headless-chrome
       # https://bugs.chromium.org/p/chromium/issues/detail?id=752747
@@ -136,7 +136,7 @@ jobs:
           chromium-browser --headless --dump-dom https://www.google.com/ || true
           # chromium-browser --headless --dump-dom chrome://policy/ || true
           # chromium-browser --headless --dump-html chrome://policy/ || true
-        if: ${{ matrix.os == 'ubuntu-latest'}}
+        if: ${{ matrix.distribution == 'ubuntu'}}
         continue-on-error: true
       - name: After script - chrome headless - macos
         run: |
@@ -146,5 +146,5 @@ jobs:
           # "$chromeapp" --headless --dump-dom https://www.google.com/ || true
           # "$chromeapp" --headless --dump-dom chrome://policy/ || true
           # "$chromeapp" --headless --dump-html chrome://policy/ || true
-        if: ${{ matrix.os == 'macos-latest'}}
+        if: ${{ matrix.distribution == 'macos'}}
         continue-on-error: true
