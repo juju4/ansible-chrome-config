@@ -40,6 +40,8 @@ chrome_extension_allowlist:
     - "gppongmhjkpfnbhagpmjfkannfbllamg"
     # https://chromewebstore.google.com/detail/forensic-osint-full-page/jojaomahhndmeienhjihojidkddkahcn
     - "jojaomahhndmeienhjihojidkddkahcn"
+    # https://chromewebstore.google.com/detail/dima-analyzer/idefpkpjaihgehhoppojpoboifblfcmm
+    - "idefpkpjaihgehhoppojpoboifblfcmm"
 chrome_extension_force:
     - "ddkjiahejlhfcafbddmgiahcphecmpfh"
     - "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"
