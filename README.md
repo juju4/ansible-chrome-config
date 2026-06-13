@@ -75,6 +75,7 @@ $ vagrant ssh
 * Chromium-based browsers management resources
   * https://support.brave.com/hc/en-us/articles/360039248271-Group-Policy
   * https://github.com/Prowler2/Brave-Browser-GPO-Policy
+  * Vivaldi use the same policy file than Chrome/Chromium
 
 ## License
 
